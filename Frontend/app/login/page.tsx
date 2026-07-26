@@ -330,6 +330,43 @@ export default function LoginPage() {
           </form>
         )}
 
+        {/* Quick Demo Credentials Shortcut Buttons */}
+        {authMode === 'SIGN_IN' && (
+          <div className="mt-4 pt-4 border-t border-slate-100 space-y-2">
+            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider text-center">
+              Quick One-Click Demo Credentials
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setAuthMode('SIGN_IN');
+                  setRole('ADMIN');
+                  setEmail('admin@ems.com');
+                  setPassword('password123');
+                  setServerMessage(null);
+                }}
+                className="px-3 py-2 text-xs font-semibold rounded-lg bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 transition-colors flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <KeyRound className="w-3.5 h-3.5" /> Demo Admin
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setAuthMode('SIGN_IN');
+                  setRole('EMPLOYEE');
+                  setEmail('alex@ems.com');
+                  setPassword('password123');
+                  setServerMessage(null);
+                }}
+                className="px-3 py-2 text-xs font-semibold rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 transition-colors flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <UserCheck className="w-3.5 h-3.5" /> Demo Employee
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* SIGN UP FORM (First Time Users) */}
         {authMode === 'SIGN_UP' && (
           <form onSubmit={handleSignUp} className="space-y-3 mt-2">
