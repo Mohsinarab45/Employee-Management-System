@@ -1,16 +1,17 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import path from 'path';
 import { User } from './models/User';
 import { Holiday } from './models/Holiday';
 import { Attendance } from './models/Attendance';
 import { Leave } from './models/Leave';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const seedDB = async () => {
   try {
-    const connStr = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/ems_db';
-    console.log(`[Seed] Connecting to MongoDB at ${connStr}...`);
+    const connStr = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/ems_db';
+    console.log(`[Seed] Connecting to MongoDB...`);
     await mongoose.connect(connStr);
 
     console.log(`[Seed] Clearing existing collections...`);
