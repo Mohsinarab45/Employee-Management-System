@@ -41,7 +41,7 @@ const userSchema = new Schema<IUser>(
 );
 
 // Pre-save hook to hash password if modified
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function (this: any, next: any) {
   if (!this.isModified('passwordHash')) return next();
   try {
     const salt = await bcrypt.genSalt(10);

@@ -68,11 +68,11 @@ export const getAllLeaves = async (req: AuthRequest, res: Response): Promise<voi
 
     for (const emp of activeEmployees) {
       const empLeaves = allLeaves.filter(
-        (l) => l.userId?.toString() === emp._id.toString() || l.userEmployeeId === emp.employeeId
+        (l: any) => l.userId?.toString() === emp._id.toString() || l.userEmployeeId === emp.employeeId
       );
 
       if (empLeaves.length > 0) {
-        empLeaves.forEach((l) => {
+        empLeaves.forEach((l: any) => {
           activeLeaves.push({
             id: l._id,
             _id: l._id,
