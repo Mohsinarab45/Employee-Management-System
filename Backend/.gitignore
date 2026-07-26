@@ -1,0 +1,24 @@
+# Dependencies
+/node_modules
+
+# TypeScript compiler build output
+/dist
+/build
+*.tsbuildinfo
+
+# Environment & config secrets
+.env
+.env.local
+.env.production
+.env.staging
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+
+# System & IDE files
+.DS_Store
+.vscode/
+.idea/

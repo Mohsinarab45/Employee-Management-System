@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build artifacts
+dist/
+**/dist/
+.next/
+**/.next/
+build/
+**/build/
+*.tsbuildinfo
+
+# Secret Environment Files
+.env
+.env*.local
+.env.production
+
+# System & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
