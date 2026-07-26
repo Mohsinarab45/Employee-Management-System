@@ -27,9 +27,10 @@ app.use(
     contentSecurityPolicy: false, // Allow Swagger UI inline scripts
   })
 );
+const allowedOrigin = process.env.CORS_ORIGIN || '*';
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    origin: allowedOrigin === '*' ? true : allowedOrigin,
     credentials: true,
   })
 );

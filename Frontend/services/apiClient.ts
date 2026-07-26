@@ -11,7 +11,7 @@ class ApiClient {
       headers: {
         'Content-Type': 'application/json',
       },
-      timeout: 4000, // Reduced to 4 seconds for fast load
+      timeout: 30000, // 30 seconds to support cloud cold starts (e.g. Render free tier)
     });
 
     // JWT Request Interceptor
