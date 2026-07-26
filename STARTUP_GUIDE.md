@@ -4,7 +4,7 @@ Follow these simple steps to start the complete EMS Application:
 
 ---
 
-## 🚀 1. Start Backend Service
+##  1. Start Backend Service
 
 ```bash
 cd d:\EMS\Backend
@@ -16,7 +16,7 @@ npm run dev
 
 ---
 
-## 💻 2. Start Frontend App
+##  2. Start Frontend App
 
 ```bash
 cd d:\EMS\Frontend
@@ -27,11 +27,4 @@ npm run dev
 
 ---
 
-## 🔑 3. Default Sign-In Credentials
 
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Admin** | `admin@ems.com` | `password123` |
-| **Employee** | `alex@ems.com` | `password123` |
-
-Click **"Demo Admin"** or **"Demo Employee"** on the login page for one-click testing!
